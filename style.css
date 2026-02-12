@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 60px auto;
+  overflow: hidden;
+}
+
+/* Video */
+.wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG overlay */
+.wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Text inside mask */
+.wrapper svg text {
+  font-size: 120px;
+  font-weight: 900;
+  fill: black;
+  letter-spacing: 5px;
+}
+
+/* Mask rectangle */
+.wrapper svg rect {
+  fill: white;
+}
+
+/* Side white borders */
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: white;
+}
+
+.wrapper::before {
+  left: -9px;
+}
+
+.wrapper::after {
+  right: -5px;
+}
